@@ -12,13 +12,13 @@ cJSON *led_entry = NULL;
 cJSON *spiff_write = NULL;
 cJSON *spiff_read = NULL;
 cJSON *number = NULL;
-
+cJSON *skill_name = NULL;
 
 char* json_send(){     //Create the JSON object and prep it for sending
 cJSON *monitor = cJSON_CreateObject();
     name = cJSON_CreateString("Dav");
     led_entry = cJSON_CreateBool(true);
-    spiff_write = cJSON_CreateBool(false);
+    spiff_write = cJSON_CreateBool(true);
     spiff_read = cJSON_CreateBool(true);
     number = cJSON_CreateNumber(2);
 
@@ -28,8 +28,15 @@ cJSON *monitor = cJSON_CreateObject();
     cJSON_AddItemToObject(monitor, "spiff_write", spiff_write);
     cJSON_AddItemToObject(monitor, "spiff_read", spiff_read);
 
+    skill_name = cJSON_CreateArray();
+    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Epic"));
+    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Gamer"));
+    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Moment"));
+    cJSON_AddItemToObject(monitor,"skill_name",skill_name);
+
     string = cJSON_Print(monitor);
 
+    cJSON_Delete(monitor);
     return string;
 }
 
@@ -44,13 +51,11 @@ void cb_connection_ok(void *pvParameter){
 }
 
 
-esp_mqtt_client_handle_t mqtt_client;
 int mqtt_connected = 0;
 
 static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 {
     esp_mqtt_client_handle_t client = event->client;
-    mqtt_client = event->client;
     int msg_id;
 
     switch (event->event_id) {
@@ -104,7 +109,7 @@ static void mqtt_app_start(void)
     while (counter<2)
     {
         esp_mqtt_client_publish(client, IO_TOPIC, json_tosend, 0, 1, 0);
-        vTaskDelay(3000);   
+        vTaskDelay(4000);   
         counter++;
     }
     
