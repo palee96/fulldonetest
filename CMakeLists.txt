@@ -9,4 +9,9 @@ set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/common_components/protocol_exam
 set(EXTRA_COMPONENTS_DIRS components/)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(fulldonetest)
+get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
+
+string(REPLACE " " "_" ProjectId ${ProjectId})
+project(${ProjectId})
+
+target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "main/adafruitmqtts.pem" TEXT)

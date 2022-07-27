@@ -1,8 +1,12 @@
 #include "main.h"
 
-#define BROKER_URL ""
-#define IO_TOPIC ""
+#define BROKER_URL "mqtts://palee:aio_Xxhv44iuZZdPvNg13HgoKDraqcvS@io.adafruit.com"
+#define IO_TOPIC "palee/feeds/jsonstuff"
 static const char *TAG = "Main";
+
+//Adafruit IO certificate 
+extern const uint8_t adafruitmqtts_pem_start[]   asm("_binary_adafruitmqtts_pem_start");
+extern const uint8_t adafruitmqtts_pem_end[]   asm("_binary_adafruitmqtts_pem_end");
 
 
 // cJSON veriables //
@@ -97,11 +101,12 @@ static void mqtt_app_start(void)
     esp_mqtt_client_config_t mqtt_cfg = {
         .uri = BROKER_URL,
         .event_handle = mqtt_event_handler,
+        .cert_pem = (const char *)adafruitmqtts_pem_start, 
     };
 
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
     esp_mqtt_client_start(client);
-
+    
 
     int counter = 0;
     char* json_tosend = json_send();

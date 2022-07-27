@@ -44,6 +44,8 @@
     "BOOTLOADER_WDT_DISABLE_IN_USER_CODE": false,
     "BOOTLOADER_WDT_ENABLE": true,
     "BOOTLOADER_WDT_TIME_MS": 9000,
+    "BROKER_BIN_SIZE_TO_SEND": 20000,
+    "BROKER_CERTIFICATE_OVERRIDE": "",
     "BROKER_URL": "mqtt://mqtt.eclipseprojects.io",
     "BT_ENABLED": false,
     "COAP_LOG_DEFAULT_LEVEL": 0,

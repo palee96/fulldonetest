@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/David/espidffeladatok/fulldonetest/components/esp32-wifi-manager/src/index.html
+/* * Data converted from C:/ESPIdfCodes/fulldonetest/components/esp32-wifi-manager/src/index.html
  */
 .data
 .section .rodata.embedded

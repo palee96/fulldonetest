@@ -12,6 +12,7 @@
     "idf.flashType": "UART",
     "idf.portWin": "COM5",
     "files.associations": {
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "*.inc": "c"
     }
 }
