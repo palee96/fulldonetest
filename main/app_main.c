@@ -1,7 +1,7 @@
 #include "main.h"
 
-#define BROKER_URL "mqtts://palee:aio_Xxhv44iuZZdPvNg13HgoKDraqcvS@io.adafruit.com"
-#define IO_TOPIC "palee/feeds/jsonstuff"
+#define BROKER_URL ""
+#define IO_TOPIC ""
 static const char *TAG = "Main";
 
 //Adafruit IO certificate 
