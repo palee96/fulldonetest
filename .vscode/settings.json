@@ -10,9 +10,16 @@
     "idf.pythonBinPathWin": "C:\\Users\\David\\.espressif\\python_env\\idf4.4_py3.8_env\\Scripts\\python.exe",
     "idf.toolsPathWin": "C:\\Users\\David\\.espressif",
     "idf.flashType": "UART",
-    "idf.portWin": "COM5",
+    "idf.portWin": "COM3",
     "files.associations": {
         "typeinfo": "c",
-        "*.inc": "c"
+        "*.inc": "c",
+        "random": "c",
+        "string": "c",
+        "main.h": "c",
+        "task.h": "c",
+        "used_functions.h": "c",
+        "used_defines.h": "c",
+        "sys.h": "c"
     }
 }

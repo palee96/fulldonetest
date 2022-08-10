@@ -23,4 +23,16 @@
 #include "esp_log.h"
 #include "mqtt_client.h"
 #include "cJSON.h"
-#include "wifi_manager.h"
+
+#include "stdio.h"
+#include "esp_mac.h"
+#include "esp_event.h"
+#include "lwip/err.h"
+#include "lwip/sys.h"
+#include <esp_system.h>
+#include <sys/param.h>
+#include "esp_eth.h"
+#include <esp_http_server.h>
+#include "tcpip_adapter.h"
+#include <unistd.h>
+#include "esp_err.h"

@@ -123,7 +123,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/wifi_provisioning/cmake_install.cmake")
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/main/cmake_install.cmake")
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/cmake_install.cmake")
-  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/cmake_install.cmake")
 
 endif()
 

@@ -683,10 +683,3 @@ C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/CMakeFiles/ed
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/CMakeFiles/rebuild_cache.dir
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/CMakeFiles/list_install_components.dir
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/CMakeFiles/install/strip.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/__idf_esp32-wifi-manager.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/install/local.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/install.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/edit_cache.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/rebuild_cache.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/list_install_components.dir
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp32-wifi-manager/CMakeFiles/install/strip.dir
