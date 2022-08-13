@@ -2,7 +2,7 @@
 #define esp_wifi_pass "testAP96"
 
 #define BROKER_URL ""
-#define IO_TOPIC ""
+#define IO_TOPIC "palee/feeds/jsonstuff"
 
 #define maximum_retries 3
 #define DEFAULT_SCAN_LIST_SIZE 20

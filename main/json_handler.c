@@ -26,14 +26,6 @@ cJSON *monitor = cJSON_CreateObject();
     cJSON_AddItemToObject(monitor,"number",number);
     cJSON_AddItemToObject(monitor, "spiff_write", spiff_write);
     cJSON_AddItemToObject(monitor, "spiff_read", spiff_read);
-
-    /*
-    skill_name = cJSON_CreateArray();
-    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Epic"));
-    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Gamer"));
-    cJSON_AddItemToArray(skill_name,cJSON_CreateString("Moment"));
-    cJSON_AddItemToObject(monitor,"skill_name",skill_name);
-    */
    
     string = cJSON_Print(monitor);
 
