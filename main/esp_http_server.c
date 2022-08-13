@@ -1,10 +1,7 @@
 #include "main.h"
 #include "used_defines.h"
 #include "used_functions.h"
-
-
-static char __SSID[64];
-static char __PWD[32];
+#include "extern_values.h"
 
 // WEBSERVER INITIALIZATION
 
