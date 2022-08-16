@@ -99,7 +99,7 @@ esp_wifi_connect();
         ESP_LOGI(TAG, "SSID \t\t%s", ap_info[i].ssid);
         vTaskDelay(10);
         
-        if (strstr((char*)ap_info[i].ssid,tarhely)!=NULL)
+        if (strcmp((char*)ap_info[i].ssid,tarhely)==0)
         {
             printf("Found saved SSID!\n");
             stop = true;
@@ -107,7 +107,7 @@ esp_wifi_connect();
             start_wifi_with_nvs();
             break;
         }
-        else if (strstr((char*)ap_info[i].ssid,tarhely)==NULL)  
+        else if (strcmp((char*)ap_info[i].ssid,tarhely)!=0)  
         {
             printf("Continueing search....\n");
             continue;
