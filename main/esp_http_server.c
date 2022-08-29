@@ -65,7 +65,6 @@
     // End response
     httpd_resp_send_chunk(req, NULL, 0);
 
-    //start_wifi_with_nvs();
     wifi_scan();
     return ESP_OK;
 }
@@ -101,16 +100,16 @@
     httpd_resp_sendstr_chunk(req, "<form class=\"form1\" id=\"loginForm\" action=\"\">");
 
     httpd_resp_sendstr_chunk(req, "<label for=\"SSID\">WiFi Name</label>");
-    httpd_resp_sendstr_chunk(req, "<input id=\"ssid\" type=\"text\" name=\"ssid\" maxlength=\"64\" minlength=\"4\" required>");
+    httpd_resp_sendstr_chunk(req, "<input id=\"ssid\" type=\"text\" name=\"ssid\" maxlength=\"64\" required>");
 
     httpd_resp_sendstr_chunk(req, "<label for=\"Password\">Password</label>");
-    httpd_resp_sendstr_chunk(req, "<input id=\"pwd\" type=\"password\" name=\"pwd\" maxlength=\"64\" minlength=\"4\" required>");
+    httpd_resp_sendstr_chunk(req, "<input id=\"pwd\" type=\"password\" name=\"pwd\" maxlength=\"64\" required>");
 
-    httpd_resp_sendstr_chunk(req, "<button>Submit</button>");
+    httpd_resp_sendstr_chunk(req, "<button type =\"submit\">Submit</button>");
     httpd_resp_sendstr_chunk(req, "</form>");
 
     httpd_resp_sendstr_chunk(req, "<script>");  
-    httpd_resp_sendstr_chunk(req, "document.getElementById(\"loginForm\").addEventListener(\"submit\", (e) => {e.preventDefault(); const formData = new FormData(e.target); const data = Array.from(formData.entries()).reduce((memo, pair) => ({...memo, [pair[0]]: pair[1],  }), {}); var xhr = new XMLHttpRequest(); xhr.open(\"POST\", \"http://192.168.4.1/connection2\", true); xhr.setRequestHeader('Content-Type', 'application/json'); xhr.send(JSON.stringify(data)); document.getElementById(\"output\").innerHTML = JSON.stringify(data);});");
+    httpd_resp_sendstr_chunk(req, "document.getElementById(\"loginForm\").addEventListener(\"submit\", (e) => {e.preventDefault(); const formData = new FormData(e.target);  const data = Object.fromEntries(formData); console.log(JSON.stringify(data)); var xhr = new XMLHttpRequest(); xhr.open(\"POST\", \"http://192.168.4.1/connection2\", true); xhr.setRequestHeader('Content-Type', 'application/json'); xhr.send(JSON.stringify(data));});");
     httpd_resp_sendstr_chunk(req, "</script>");
 
     httpd_resp_sendstr_chunk(req, "</body></html>");
@@ -121,7 +120,7 @@
 
 
  const httpd_uri_t servePage = {
-    .uri       = "/wifiap2",
+    .uri       = "/wifiap",
     .method    = HTTP_GET,
     .handler   = servePage_get_handler,
     .user_ctx  = NULL,

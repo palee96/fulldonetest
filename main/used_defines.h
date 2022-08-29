@@ -3,8 +3,10 @@
 
 #define BROKER_URL ""
 #define IO_TOPIC "palee/feeds/jsonstuff"
+#define BROKER_PASS ""
+#define BROKER_USER ""
 
-#define maximum_retries 3
+#define maximum_retries 2
 #define DEFAULT_SCAN_LIST_SIZE 20
 
 #define TAG "Main"

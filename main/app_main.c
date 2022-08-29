@@ -7,7 +7,7 @@ char __SSID[64];
 char __PWD[32];
  
 bool wifi_lost = false;
-int maximum_reconnects =0;
+int maximum_reconnects = 0;
 
 void event_handler(void* arg, esp_event_base_t event_base,
                                     int32_t event_id, void* event_data)
@@ -94,6 +94,8 @@ void mqtt_app_start()
     esp_mqtt_client_config_t mqtt_cfg = {
         .uri = BROKER_URL,
         .event_handle = mqtt_event_handler,
+        .password = BROKER_PASS,
+        .username = BROKER_USER
     };
 
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
