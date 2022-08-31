@@ -25,7 +25,7 @@ void event_handler(void* arg, esp_event_base_t event_base,
                                     int32_t event_id, void* event_data)
 {
     wifi_lost = true;
-    if (maximum_reconnects == 20)
+    if (maximum_reconnects == 10)
     {
         printf("Maximum number of reconnects reached...starting soft-AP\n");
         printf("Please check wifi SSID and Password!\n");
