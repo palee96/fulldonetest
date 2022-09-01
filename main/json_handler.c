@@ -15,7 +15,7 @@ cJSON *skill_name = NULL;
 
 char* json_send(){     //Create the JSON object and prep it for sending
 cJSON *monitor = cJSON_CreateObject();
-    name = cJSON_CreateString("Dav");
+    name = cJSON_CreateString("BIGJEFF");
     led_entry = cJSON_CreateBool(true);
     spiff_write = cJSON_CreateBool(true);
     spiff_read = cJSON_CreateBool(true);

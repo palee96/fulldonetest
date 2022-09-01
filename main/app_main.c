@@ -6,7 +6,6 @@
 char __SSID[64];
 char __PWD[32];
  
-bool wifi_lost = false;
 int maximum_reconnects = 0;
 
 void event_handler(void* arg, esp_event_base_t event_base,
@@ -24,8 +23,7 @@ void event_handler(void* arg, esp_event_base_t event_base,
  void event_handler_err(void* arg, esp_event_base_t event_base,
                                     int32_t event_id, void* event_data)
 {
-    wifi_lost = true;
-    if (maximum_reconnects == 10)
+    if (maximum_reconnects == 15)
     {
         printf("Maximum number of reconnects reached...starting soft-AP\n");
         printf("Please check wifi SSID and Password!\n");
@@ -38,16 +36,11 @@ void event_handler(void* arg, esp_event_base_t event_base,
         vTaskDelay(500);
         esp_wifi_connect();
     }
-    }
-       
+    }    
 }
-
-
-
 
 static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 {
-    
     
     esp_mqtt_client_handle_t client = event->client;
     int msg_id;
@@ -90,25 +83,14 @@ static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 
 void mqtt_app_start()
 {
-
     esp_mqtt_client_config_t mqtt_cfg = {
         .uri = BROKER_URL,
         .event_handle = mqtt_event_handler,
         .password = BROKER_PASS,
         .username = BROKER_USER
     };
-
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
-    
-    if (wifi_lost == true)
-    {
-       ESP_LOGE(TAG,"Lost wifi connection...resending last data....\n");;
-       esp_mqtt_client_reconnect(client);
-       wifi_lost = false;
-    }
-    else{
-        esp_mqtt_client_start(client);
-    }
+    esp_mqtt_client_start(client);
 }
 
 void app_main(void)
