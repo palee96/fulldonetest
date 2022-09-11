@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/fulldonetest")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/my_project")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -122,7 +122,14 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/ulp/cmake_install.cmake")
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/wifi_provisioning/cmake_install.cmake")
   include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/main/cmake_install.cmake")
-  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp_webserver/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/event_handlers/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/json_handler/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/mqtt_esp/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/read_data_from_nvs/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/soft_ap/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/start_wifi_with_nvs/cmake_install.cmake")
+  include("C:/ESPIdfCodes/fulldonetest/build/esp-idf/wifi_scan/cmake_install.cmake")
 
 endif()
 

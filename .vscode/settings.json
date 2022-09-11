@@ -10,7 +10,7 @@
     "idf.pythonBinPathWin": "C:\\Users\\David\\.espressif\\python_env\\idf4.4_py3.8_env\\Scripts\\python.exe",
     "idf.toolsPathWin": "C:\\Users\\David\\.espressif",
     "idf.flashType": "UART",
-    "idf.portWin": "COM8",
+    "idf.portWin": "COM3",
     "files.associations": {
         "typeinfo": "c",
         "*.inc": "c",
@@ -20,6 +20,16 @@
         "task.h": "c",
         "used_functions.h": "c",
         "used_defines.h": "c",
-        "sys.h": "c"
+        "sys.h": "c",
+        "extern_values.h": "c",
+        "read_data_from_nvs.h": "c",
+        "headerfiles.h": "c",
+        "queue.h": "c",
+        "semphr.h": "c",
+        "soft_ap.h": "c",
+        "dns.h": "c",
+        "cjson.h": "c",
+        "wifi_scan.h": "c",
+        "start_wifi_with_nvs.h": "c"
     }
 }

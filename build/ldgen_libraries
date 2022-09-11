@@ -70,4 +70,11 @@ C:/ESPIdfCodes/fulldonetest/build/esp-idf/spiffs/libspiffs.a
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/ulp/libulp.a
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/ESPIdfCodes/fulldonetest/build/esp-idf/main/libmain.a
-C:/ESPIdfCodes/fulldonetest/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/esp_webserver/libesp_webserver.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/event_handlers/libevent_handlers.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/json_handler/libjson_handler.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/mqtt_esp/libmqtt_esp.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/read_data_from_nvs/libread_data_from_nvs.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/soft_ap/libsoft_ap.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/start_wifi_with_nvs/libstart_wifi_with_nvs.a
+C:/ESPIdfCodes/fulldonetest/build/esp-idf/wifi_scan/libwifi_scan.a
